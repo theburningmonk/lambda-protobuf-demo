@@ -30,8 +30,8 @@ functions:
           path: /json
           method: get
 
-  both:
-    handler: functions/both.handler
+  contentNegotiated:
+    handler: functions/contentNegotiated.handler
     events:
       - http:
           path: /both
