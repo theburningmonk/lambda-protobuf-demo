@@ -2,6 +2,16 @@
 
 Demo using API Gateway and Lambda with Protocol Buffer.
 
+In this demo you'll find 3 handlers:
+
+* json - always return response in JSON
+* proto - always return response in protocol buffer format, you need to set the
+`Accept` header to `application/x-protobuf` for this to work otherwise API Gateway
+just returns the base64 string instead
+* contentNegotiated - uses the `Accept` header to decide whether to return JSON
+or protocol buffer, and return `406 Not Acceptable` if the `Accept` header is 
+neither `application/json` nor `application/x-protobuf`
+
 ### Deployment
 
 If you're on Linux, run `./deploy.sh`.
