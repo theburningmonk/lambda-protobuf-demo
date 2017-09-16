@@ -12,6 +12,8 @@ just returns the base64 string instead
 or protocol buffer, and return `406 Not Acceptable` if the `Accept` header is 
 neither `application/json` nor `application/x-protobuf`
 
+For more details, please read this [blog post](https://medium.com/@theburningmonk/using-protocol-buffers-with-api-gateway-and-aws-lambda-22c3804f3e76).
+
 ### Deployment
 
 If you're on Linux, run `./deploy.sh`.
