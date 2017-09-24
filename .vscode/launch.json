@@ -4,6 +4,24 @@
       {
         "type": "node",
         "request": "launch",
+        "name": "acceptance test",
+        "program": "${workspaceRoot}/node_modules/.bin/mocha",
+        "args": [
+          "tests/test_cases",
+          "--reporter",
+          "spec"
+        ],
+        "cwd": "${workspaceRoot}",
+        "runtimeArgs": [
+          "--nolazy"
+        ],
+        "env": {
+          "TEST_ROOT": "https://your-deployed-api/dev"
+        }
+      },
+      {
+        "type": "node",
+        "request": "launch",
         "name": "proto",
         "program": "${workspaceRoot}/node_modules/.bin/sls",
         "args": [

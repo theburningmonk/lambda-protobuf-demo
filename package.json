@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "acceptance-dev": "./node_modules/.bin/mocha tests/test_cases --reporter spec"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3",
     "serverless": "^1.22.0",
-    "serverless-apigw-binary": "^0.4.0"
+    "serverless-apigw-binary": "^0.4.0",
+    "superagent": "^3.6.0",
+    "superagent-promise": "^1.1.0"
   },
   "dependencies": {
     "bluebird": "^3.5.0",
